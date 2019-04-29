@@ -5,7 +5,7 @@ class Counter extends React.Component {
   render() {
     return (
       <div>
-        <p>Clicked: {this.props.counter} times</p>
+        <p>Clicked: {this.props.count} times</p>
         <p>
           <button
             onClick={() => {
@@ -29,7 +29,7 @@ class Counter extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    counter: state.counter
+    count: state.count
   }
 }
 

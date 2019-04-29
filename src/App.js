@@ -6,18 +6,18 @@ import Content from './components/Content'
 import Counter from './components/Counter'
 
 const initialState = {
-  counter: 0
+  count: 0
 }
 
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case 'INCREMENT':
       return {
-        counter: state.counter + 1
+        count: state.count + 1
       }
     case 'DECREMENT':
       return {
-        counter: state.counter - 1
+        count: state.count - 1
       }
     default:
       return state
@@ -31,17 +31,15 @@ const reduxStore = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
-class App extends React.Component {
-  render() {
-    return (
-      <Provider store={reduxStore}>
-        <div>
-          <Content />
-          <Counter />
-        </div>
-      </Provider>
-    )
-  }
+const App = () => {
+  return (
+    <Provider store={reduxStore}>
+      <div>
+        <Content />
+        <Counter />
+      </div>
+    </Provider>
+  )
 }
 
 export default App

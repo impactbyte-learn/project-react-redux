@@ -2,13 +2,13 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 const Content = props => {
-  return <h1>Build React Redux app, {props.counter} times</h1>
+  return <h1>Build React Redux app, {props.count} times</h1>
 }
 
 const mapStateToProps = state => {
   return {
-    counter: state.counter
+    count: state.count
   }
 }
 
-export default connect(mapStateToProps)(Header)
+export default connect(mapStateToProps)(Content)
