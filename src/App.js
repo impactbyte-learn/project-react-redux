@@ -36,7 +36,7 @@ class App extends React.Component {
     return (
       <Provider store={reduxStore}>
         <div>
-          <Header />
+          <Content />
           <Counter />
         </div>
       </Provider>
